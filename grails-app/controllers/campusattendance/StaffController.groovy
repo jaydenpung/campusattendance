@@ -35,6 +35,7 @@ class StaffController {
             return
         }
 
+        staffInstance.password = staffInstance.password.bytes.encodeBase64().toString()
         staffInstance.save flush:true
 
         request.withFormat {
@@ -62,6 +63,7 @@ class StaffController {
             return
         }
 
+        staffInstance.password = staffInstance.password.bytes.encodeBase64().toString()
         staffInstance.save flush:true
 
         request.withFormat {

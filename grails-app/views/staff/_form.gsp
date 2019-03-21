@@ -20,39 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'address', 'error')} required">
-	<label for="address">
-		<g:message code="staff.address.label" default="Address" />
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="staff.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="address" required="" value="${staffInstance?.address}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'age', 'error')} required">
-	<label for="age">
-		<g:message code="staff.age.label" default="Age" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="age" type="number" value="${staffInstance.age}" required=""/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'email', 'error')} required">
-	<label for="email">
-		<g:message code="staff.email.label" default="Email" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="email" required="" value="${staffInstance?.email}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'icNumber', 'error')} required">
-	<label for="icNumber">
-		<g:message code="staff.icNumber.label" default="Ic Number" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="icNumber" required="" value="${staffInstance?.icNumber}"/>
+	<g:textField name="password" required=""/>
 
 </div>
 
@@ -65,12 +38,57 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'age', 'error')} required">
+	<label for="age">
+		<g:message code="staff.age.label" default="Age" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="age" type="number" value="${staffInstance.age}" required=""/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'icNumber', 'error')} required">
+	<label for="icNumber">
+		<g:message code="staff.icNumber.label" default="Ic Number" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="icNumber" required="" value="${staffInstance?.icNumber}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'email', 'error')} required">
+	<label for="email">
+		<g:message code="staff.email.label" default="Email" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="email" required="" value="${staffInstance?.email}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'address', 'error')} required">
+	<label for="address">
+		<g:message code="staff.address.label" default="Address" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="address" required="" value="${staffInstance?.address}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'telephoneNumber', 'error')} required">
 	<label for="telephoneNumber">
 		<g:message code="staff.telephoneNumber.label" default="Telephone Number" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="telephoneNumber" required="" value="${staffInstance?.telephoneNumber}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: staffInstance, field: 'uniqueMessagingId', 'error')} ">
+	<label for="uniqueMessagingId">
+		<g:message code="staff.uniqueMessagingId.label" default="Unique Messaging Id" />
+		
+	</label>
+	<g:textField name="uniqueMessagingId" value="${staffInstance?.uniqueMessagingId}"/>
 
 </div>
 

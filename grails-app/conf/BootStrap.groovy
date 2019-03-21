@@ -84,7 +84,8 @@ class BootStrap {
 	                    email: data.email,
 	                    address: data.address,
 	                    telephoneNumber: data.telephoneNumber,
-	                    icNumber: data.icNumber
+	                    icNumber: data.icNumber,
+	                    password: "12345678".bytes.encodeBase64().toString()
 	                )
 
 	                staff.save(flush:true, failOnError: true)
@@ -144,7 +145,8 @@ class BootStrap {
 	                    email: data.email,
 	                    address: data.address,
 	                    telephoneNumber: data.telephoneNumber,
-	                    icNumber: data.icNumber
+	                    icNumber: data.icNumber,
+	                    password: "12345678".bytes.encodeBase64().toString()
 	                )
 
 	                student.save(flush:true, failOnError: true)
@@ -157,6 +159,30 @@ class BootStrap {
     }
 
     def createDefaultSubjectAndLessons() {
+    	try {
+	            [
+	                [
+	                    subjectName: "English",
+	                ],
+	                [
+	                    subjectName: "Mathematics",
+	                ],
+	                [
+	                    subjectName: "Geography",
+	                ]
+	            ].each { data ->
+
+	                def subject = new Subject(
+	                    subjectName: data.subjectName,
+	                )
+
+	                subject.save(flush:true, failOnError: true)
+	                log.info("Saved subject: ${subject.subjectName}")
+	            }
+        }
+        catch (Exception ex) {
+            log.error("createDefaultSubjectAndLessons() failed: ${ex.message}", ex)
+        }
     }
 
     def createDefaultLessonAttendances() {

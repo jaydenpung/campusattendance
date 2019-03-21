@@ -41,38 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${staffInstance?.address}">
+				<g:if test="${staffInstance?.password}">
 				<li class="fieldcontain">
-					<span id="address-label" class="property-label"><g:message code="staff.address.label" default="Address" /></span>
+					<span id="password-label" class="property-label"><g:message code="staff.password.label" default="Password" /></span>
 					
-						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${staffInstance}" field="address"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${staffInstance?.age}">
-				<li class="fieldcontain">
-					<span id="age-label" class="property-label"><g:message code="staff.age.label" default="Age" /></span>
-					
-						<span class="property-value" aria-labelledby="age-label"><g:fieldValue bean="${staffInstance}" field="age"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${staffInstance?.email}">
-				<li class="fieldcontain">
-					<span id="email-label" class="property-label"><g:message code="staff.email.label" default="Email" /></span>
-					
-						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${staffInstance}" field="email"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${staffInstance?.icNumber}">
-				<li class="fieldcontain">
-					<span id="icNumber-label" class="property-label"><g:message code="staff.icNumber.label" default="Ic Number" /></span>
-					
-						<span class="property-value" aria-labelledby="icNumber-label"><g:fieldValue bean="${staffInstance}" field="icNumber"/></span>
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${staffInstance}" field="password"/></span>
 					
 				</li>
 				</g:if>
@@ -86,11 +59,56 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${staffInstance?.age}">
+				<li class="fieldcontain">
+					<span id="age-label" class="property-label"><g:message code="staff.age.label" default="Age" /></span>
+					
+						<span class="property-value" aria-labelledby="age-label"><g:fieldValue bean="${staffInstance}" field="age"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${staffInstance?.icNumber}">
+				<li class="fieldcontain">
+					<span id="icNumber-label" class="property-label"><g:message code="staff.icNumber.label" default="Ic Number" /></span>
+					
+						<span class="property-value" aria-labelledby="icNumber-label"><g:fieldValue bean="${staffInstance}" field="icNumber"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${staffInstance?.email}">
+				<li class="fieldcontain">
+					<span id="email-label" class="property-label"><g:message code="staff.email.label" default="Email" /></span>
+					
+						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${staffInstance}" field="email"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${staffInstance?.address}">
+				<li class="fieldcontain">
+					<span id="address-label" class="property-label"><g:message code="staff.address.label" default="Address" /></span>
+					
+						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${staffInstance}" field="address"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${staffInstance?.telephoneNumber}">
 				<li class="fieldcontain">
 					<span id="telephoneNumber-label" class="property-label"><g:message code="staff.telephoneNumber.label" default="Telephone Number" /></span>
 					
 						<span class="property-value" aria-labelledby="telephoneNumber-label"><g:fieldValue bean="${staffInstance}" field="telephoneNumber"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${staffInstance?.uniqueMessagingId}">
+				<li class="fieldcontain">
+					<span id="uniqueMessagingId-label" class="property-label"><g:message code="staff.uniqueMessagingId.label" default="Unique Messaging Id" /></span>
+					
+						<span class="property-value" aria-labelledby="uniqueMessagingId-label"><g:fieldValue bean="${staffInstance}" field="uniqueMessagingId"/></span>
 					
 				</li>
 				</g:if>

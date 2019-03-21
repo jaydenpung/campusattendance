@@ -10,11 +10,14 @@ class Staff {
 	String address
 	String telephoneNumber
 	String icNumber
+	String password
+	String uniqueMessagingId
 
 	static hasMany = [lessons:Lesson]
 
     static constraints = {
     	staffPosition inList: ["Ordinary", "HOD", "Dean"]
     	staffId unique: true
+    	uniqueMessagingId unique: true, nullable: true
     }
 }

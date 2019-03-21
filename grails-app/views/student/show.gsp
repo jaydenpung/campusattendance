@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.name}">
+				<li class="fieldcontain">
+					<span id="name-label" class="property-label"><g:message code="student.name.label" default="Name" /></span>
+					
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${studentInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${studentInstance?.address}">
 				<li class="fieldcontain">
 					<span id="address-label" class="property-label"><g:message code="student.address.label" default="Address" /></span>
@@ -68,15 +77,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.name}">
-				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="student.name.label" default="Name" /></span>
-					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${studentInstance}" field="name"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${studentInstance?.telephoneNumber}">
 				<li class="fieldcontain">
 					<span id="telephoneNumber-label" class="property-label"><g:message code="student.telephoneNumber.label" default="Telephone Number" /></span>
@@ -92,6 +92,17 @@
 					
 						<g:each in="${studentInstance.lessonAttendances}" var="l">
 						<span class="property-value" aria-labelledby="lessonAttendances-label"><g:link controller="lessonAttendance" action="show" id="${l.id}">${l?.lesson?.subject?.subjectName} - ${l?.lesson?.dateTime} - ${l?.attended}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.notifications}">
+				<li class="fieldcontain">
+					<span id="notifications-label" class="property-label"><g:message code="student.notifications.label" default="Notifications" /></span>
+					
+						<g:each in="${studentInstance.notifications}" var="n">
+						<span class="property-value" aria-labelledby="notifications-label"><g:link controller="notification" action="show" id="${n.id}">${n?.message}</g:link></span>
 						</g:each>
 					
 				</li>

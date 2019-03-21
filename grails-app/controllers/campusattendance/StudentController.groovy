@@ -35,6 +35,7 @@ class StudentController {
             return
         }
 
+        studentInstance.password = studentInstance.password.bytes.encodeBase64().toString()
         studentInstance.save flush:true
 
         request.withFormat {
@@ -62,6 +63,7 @@ class StudentController {
             return
         }
 
+        studentInstance.password = studentInstance.password.bytes.encodeBase64().toString()
         studentInstance.save flush:true
 
         request.withFormat {
