@@ -29,3 +29,20 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: lessonInstance, field: 'lessonAttendances', 'error')} ">
+	<label for="lessonAttendances">
+		<g:message code="lesson.lessonAttendances.label" default="Lesson Attendances" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${lessonInstance?.lessonAttendances?}" var="l">
+    <li><g:link controller="lessonAttendance" action="show" id="${l.id}">${l?.student.name} - ${l?.attended}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="lessonAttendance" action="create" params="['lesson.id': lessonInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'lessonAttendance.label', default: 'LessonAttendance')])}</g:link>
+</li>
+</ul>
+
+
+</div>

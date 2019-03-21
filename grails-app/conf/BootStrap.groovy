@@ -5,14 +5,23 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile
 import campusattendance.*
 
 class BootStrap {
-
+	def authenticateService
     def init = { servletContext ->
+
+    	if (User.count() == 0) {
+    		User user = new User (
+    			username: 'admin',
+    			password: '12345678'
+    		).save(flush: true, failOnError: true)
+    	}
+
     	switch (Environment.current) {
+
             case Environment.PRODUCTION:
                 break
             case Environment.DEVELOPMENT:
                 if (Staff.count() == 0) {
-                    createDefaultStaffs()
+                    createDefaultStaff()
                 }
                 if (Student.count() == 0) {
                     createDefaultStudents()
@@ -31,7 +40,7 @@ class BootStrap {
         servletContext.getAttribute("executor")?.shutdown()
     }
 
-    def createDefaultStaffs() {
+    def createDefaultStaff() {
         try {
 	            [
 	                [
@@ -93,7 +102,7 @@ class BootStrap {
 	            }
         }
         catch (Exception ex) {
-            log.error("createDefaultStaffs() failed: ${ex.message}", ex)
+            log.error("createDefaultStaff() failed: ${ex.message}", ex)
         }
     }
 
