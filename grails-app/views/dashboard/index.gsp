@@ -85,6 +85,8 @@
 		
 		<div id="page-body" role="main">
 
+			<g:link controller='logout'>Logout</g:link>
+
 			<div id="controller-list" role="navigation">
 				<h2>Directory:</h2>
 				<ul>
