@@ -93,7 +93,6 @@
             		<li><a href="${createLink(action: 'index', controller:'staff')}">Staff</a></li>
             		<li><a href="${createLink(action: 'index', controller:'student')}">Students</a></li>
             		<li><a href="${createLink(action: 'index', controller:'subject')}">Subjects</a></li>
-            		<li><a href="${createLink(action: 'index', controller:'lesson')}">Lessons</a></li>
             		<li><a href="${createLink(action: 'index', controller:'notification')}">Notifications</a></li>
 				</ul>
 			</div>

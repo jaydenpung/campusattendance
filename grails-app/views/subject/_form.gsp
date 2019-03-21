@@ -1,6 +1,13 @@
 <%@ page import="campusattendance.Subject" %>
 
+<div class="fieldcontain ${hasErrors(bean: subjectInstance, field: 'subjectName', 'error')} required">
+	<label for="subjectName">
+		<g:message code="subject.subjectName.label" default="Subject Name" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="subjectName" required="" value="${subjectInstance?.subjectName}"/>
 
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: subjectInstance, field: 'lessons', 'error')} ">
 	<label for="lessons">
@@ -20,12 +27,5 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: subjectInstance, field: 'subjectName', 'error')} required">
-	<label for="subjectName">
-		<g:message code="subject.subjectName.label" default="Subject Name" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="subjectName" required="" value="${subjectInstance?.subjectName}"/>
 
-</div>
 

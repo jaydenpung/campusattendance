@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list subject">
 			
+				<g:if test="${subjectInstance?.subjectName}">
+				<li class="fieldcontain">
+					<span id="subjectName-label" class="property-label"><g:message code="subject.subjectName.label" default="Subject Name" /></span>
+					
+						<span class="property-value" aria-labelledby="subjectName-label"><g:fieldValue bean="${subjectInstance}" field="subjectName"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${subjectInstance?.lessons}">
 				<li class="fieldcontain">
 					<span id="lessons-label" class="property-label"><g:message code="subject.lessons.label" default="Lessons" /></span>
@@ -30,15 +39,6 @@
 						<g:each in="${subjectInstance.lessons}" var="l">
 						<span class="property-value" aria-labelledby="lessons-label"><g:link controller="lesson" action="show" id="${l.id}">${l?.dateTime} - By ${l?.staff.name}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${subjectInstance?.subjectName}">
-				<li class="fieldcontain">
-					<span id="subjectName-label" class="property-label"><g:message code="subject.subjectName.label" default="Subject Name" /></span>
-					
-						<span class="property-value" aria-labelledby="subjectName-label"><g:fieldValue bean="${subjectInstance}" field="subjectName"/></span>
 					
 				</li>
 				</g:if>
