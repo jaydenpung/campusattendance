@@ -81,6 +81,9 @@
 		</style>
 	</head>
 	<body>
+	<script type="text/javascript">
+		window.location.href = "dashboard"
+	</script>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		
 		<div id="page-body" role="main">
