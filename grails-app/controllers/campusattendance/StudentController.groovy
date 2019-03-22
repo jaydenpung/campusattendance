@@ -16,7 +16,7 @@ class StudentController {
     }
 
     def show(Student studentInstance) {
-        respond studentInstance
+        respond studentInstance, model:[lessonAttendances: studentInstance.lessonAttendances.sort { it.lesson.dateTime }]
     }
 
     def create() {
@@ -48,7 +48,7 @@ class StudentController {
     }
 
     def edit(Student studentInstance) {
-        respond studentInstance
+        respond studentInstance, model:[lessonAttendances: studentInstance.lessonAttendances.sort { it.lesson.dateTime }]
     }
 
     @Transactional

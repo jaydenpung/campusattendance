@@ -104,11 +104,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${staffInstance?.lessons}">
+				<g:if test="${lessons}">
 				<li class="fieldcontain">
 					<span id="lessons-label" class="property-label"><g:message code="staff.lessons.label" default="Lessons" /></span>
 					
-						<g:each in="${staffInstance.lessons}" var="l">
+						<g:each in="${lessons}" var="l">
 						<span class="property-value" aria-labelledby="lessons-label"><g:link controller="lesson" action="show" id="${l.id}">${l?.subject?.subjectName} - ${l?.dateTime}</g:link></span>
 						</g:each>
 					

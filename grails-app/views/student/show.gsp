@@ -86,11 +86,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.lessonAttendances}">
+				<g:if test="${lessonAttendances}">
 				<li class="fieldcontain">
 					<span id="lessonAttendances-label" class="property-label"><g:message code="student.lessonAttendances.label" default="Lesson Attendances" /></span>
 					
-						<g:each in="${studentInstance.lessonAttendances}" var="l">
+						<g:each in="${lessonAttendances}" var="l">
 						<span class="property-value" aria-labelledby="lessonAttendances-label"><g:link controller="lessonAttendance" action="show" id="${l.id}">${l?.lesson?.subject?.subjectName} - ${l?.lesson?.dateTime} - ${l?.attended}</g:link></span>
 						</g:each>
 					

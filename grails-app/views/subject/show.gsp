@@ -32,11 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${subjectInstance?.lessons}">
+				<g:if test="${lessons}">
 				<li class="fieldcontain">
 					<span id="lessons-label" class="property-label"><g:message code="subject.lessons.label" default="Lessons" /></span>
 					
-						<g:each in="${subjectInstance.lessons}" var="l">
+						<g:each in="${lessons}" var="l">
 						<span class="property-value" aria-labelledby="lessons-label"><g:link controller="lesson" action="show" id="${l.id}">${l?.dateTime} - By ${l?.staff.name}</g:link></span>
 						</g:each>
 					

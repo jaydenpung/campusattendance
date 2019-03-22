@@ -16,7 +16,7 @@ class StaffController {
     }
 
     def show(Staff staffInstance) {
-        respond staffInstance
+        respond staffInstance, model:[lessons: staffInstance.lessons.sort { it.dateTime }]
     }
 
     def create() {
@@ -48,7 +48,7 @@ class StaffController {
     }
 
     def edit(Staff staffInstance) {
-        respond staffInstance
+        respond staffInstance, model:[lessons: staffInstance.lessons.sort { it.dateTime }]
     }
 
     @Transactional

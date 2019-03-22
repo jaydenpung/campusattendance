@@ -16,7 +16,7 @@ class SubjectController {
     }
 
     def show(Subject subjectInstance) {
-        respond subjectInstance
+        respond subjectInstance, model:[lessons: subjectInstance.lessons.sort { it.dateTime }]
     }
 
     def create() {
@@ -47,7 +47,7 @@ class SubjectController {
     }
 
     def edit(Subject subjectInstance) {
-        respond subjectInstance
+        respond subjectInstance, model:[lessons: subjectInstance.lessons.sort { it.dateTime }]
     }
 
     @Transactional

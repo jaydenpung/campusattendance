@@ -81,7 +81,7 @@
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${studentInstance?.lessonAttendances?}" var="l">
+<g:each in="${lessonAttendances}" var="l">
     <li><g:link controller="lessonAttendance" action="show" id="${l.id}">${l?.lesson?.subject?.subjectName} - ${l?.lesson?.dateTime} - ${l?.attended}</g:link></li>
 </g:each>
 <li class="add">
