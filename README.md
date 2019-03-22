@@ -11,6 +11,11 @@ Installing Grails - https://grails.github.io/grails2-doc/2.4.2/guide/gettingStar
 4) Then add the bin directory to your PATH variable  
 	 export PATH="$PATH:$GRAILS_HOME/bin"  
 	 
+Run in local  
+1) Go to project folder, type  
+	grails run-app  
+2) Browse to http://localhost:8080/campusAttendance  
+	 
 Deployment  
 1) Go to project folder, type  
 	grails prod war  
