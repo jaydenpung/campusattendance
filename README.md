@@ -11,10 +11,10 @@ Installing Grails - https://grails.github.io/grails2-doc/2.4.2/guide/gettingStar
 4) Then add the bin directory to your PATH variable  
 	 export PATH="$PATH:$GRAILS_HOME/bin"  
 
-Database
-1) By default, grails should use the built-in h2 database, so you dont have to change anything
-2) Database connection settings are located in grails-app/conf/DataSource.groovy
-2) Update this to whatever sql server you are using
+Database  
+1) By default, grails should use the built-in h2 database, so you dont have to change anything  
+2) Database connection settings are located in grails-app/conf/DataSource.groovy  
+2) Update this to whatever sql server you are using  
 	 
 Run in local  
 1) Go to project folder, type  
