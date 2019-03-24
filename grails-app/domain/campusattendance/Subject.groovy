@@ -7,5 +7,6 @@ class Subject {
 	static hasMany = [lessons: Lesson]
 
     static constraints = {
+    	subjectName unique: true
     }
 }

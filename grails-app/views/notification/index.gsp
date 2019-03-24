@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="message" title="${message(code: 'notification.message.label', default: 'Message')}" />
 					
+						<th><g:message code="notification.sender.label" default="Sender" /></th>
+					
 						<th><g:message code="notification.student.label" default="Student" /></th>
 					
 					</tr>
@@ -39,6 +41,8 @@
 						<td><g:link action="show" id="${notificationInstance.id}">${fieldValue(bean: notificationInstance, field: "dateTime")}</g:link></td>
 					
 						<td>${fieldValue(bean: notificationInstance, field: "message")}</td>
+					
+						<td>${fieldValue(bean: notificationInstance, field: "sender.name")}</td>
 					
 						<td>${fieldValue(bean: notificationInstance, field: "student.name")}</td>
 					

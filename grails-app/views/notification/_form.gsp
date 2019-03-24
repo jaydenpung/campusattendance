@@ -7,7 +7,7 @@
 		<g:message code="notification.dateTime.label" default="Date Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dateTime" precision="minute"  value="${notificationInstance?.dateTime}"  />
+	<g:datePicker name="dateTime" precision="day"  value="${notificationInstance?.dateTime}"  />
 
 </div>
 
@@ -17,6 +17,15 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="message" required="" value="${notificationInstance?.message}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: notificationInstance, field: 'sender', 'error')} required">
+	<label for="sender">
+		<g:message code="notification.sender.label" default="Sender" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="sender" name="sender.id" from="${campusattendance.Staff.list()}" optionKey="id" optionValue="name" required="" value="${notificationInstance?.sender?.id}" class="many-to-one"/>
 
 </div>
 

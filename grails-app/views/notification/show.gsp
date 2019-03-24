@@ -41,11 +41,20 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${notificationInstance?.sender}">
+				<li class="fieldcontain">
+					<span id="sender-label" class="property-label"><g:message code="notification.sender.label" default="Sender" /></span>
+					
+						<span class="property-value" aria-labelledby="sender-label"><g:link controller="staff" action="show" id="${notificationInstance?.sender?.id}">${notificationInstance?.sender?.name}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${notificationInstance?.student}">
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="notification.student.label" default="Student" /></span>
 					
-						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${notificationInstance?.student?.id}">${notificationInstance?.student?.studentId} - ${notificationInstance?.student?.name}</g:link></span>
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${notificationInstance?.student?.id}">${notificationInstance?.student?.name}</g:link></span>
 					
 				</li>
 				</g:if>
