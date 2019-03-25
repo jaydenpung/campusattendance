@@ -114,6 +114,7 @@
 
 		<script>
 
+			//To allow grouping of list
 			var groupBy = function(xs, key) {
 			  return xs.reduce(function(rv, x) {
 			    (rv[x[key]] = rv[x[key]] || []).push(x);
@@ -154,13 +155,13 @@
 						student_id_list: studentIdList
 					};
 
-					$.ajax({
-					  url: "http://localhost:5000/api/v1/mobileapi/createNotification",
-					  type: "PUT",
+					var targetUrl = window.location.protocol + "//" + window.location.hostname + ":5000/api/v1/mobileapi/createNotification";
 
+					$.ajax({
+					  url: targetUrl,
+					  type: "PUT",
 					  contentType: "application/json",
 					  dataType: "json",
-					  crossDomain: true,
 					  data: JSON.stringify(packet),
 					  success: function (results) {
 						alert("Notifications have been sent to barred students in subject: " + index);
