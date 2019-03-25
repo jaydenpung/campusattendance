@@ -94,6 +94,7 @@
             		<li><a href="${createLink(action: 'index', controller:'student')}">Students</a></li>
             		<li><a href="${createLink(action: 'index', controller:'subject')}">Subjects</a></li>
             		<li><a href="${createLink(action: 'index', controller:'notification')}">Notifications</a></li>
+            		<li><a href="${createLink(action: 'barredList', controller:'dashboard')}">Barred List</a></li>
 				</ul>
 			</div>
 		</div>

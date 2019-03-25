@@ -8,5 +8,6 @@ class Notification {
 	Date dateTime = new Date()
 
     static constraints = {
+    	sender nullable: true
     }
 }
